@@ -497,4 +497,3 @@ class Math_game_random:
 
 
 
-c_i_p()
