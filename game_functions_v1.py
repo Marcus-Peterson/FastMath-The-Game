@@ -45,7 +45,7 @@ class Math_game:
                 skip_quot.append(str(skip_num[i]/skip_den[i]))
         
         if difficulty == hard_mode:
-            for i in range(1000):
+            for i in range(10000):
                 skip_num.append(random.randint(20,90))
                 skip_den.append(random.randint(9,20))
                 skip_quot.append(str(skip_num[i]/skip_den[i]))
