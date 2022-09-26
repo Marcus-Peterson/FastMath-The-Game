@@ -1,6 +1,8 @@
 import random
 from sympy import *
 import incorrect_correct as ic
+from random import randint
+from random import choice
 
 correct = 0
 incorrect = 0
@@ -239,9 +241,9 @@ class Math_game:
         global correct
         global incorrect
 
-        skip_percentage = []                            #The percentage solution that is supposed to be skipped
-        skip_value_left = []                            #The left value that is supposed to be skipped
-        skip_value_right = []                           ## right value that is suppposed to be skipped
+        #skip_percentage = []                            #The percentage solution that is supposed to be skipped
+        #skip_value_left = []                            #The left value that is supposed to be skipped
+        #skip_value_right = []                           ## right value that is suppposed to be skipped
 
         easy_mode = 1
         medium_mode = 2
@@ -337,18 +339,18 @@ class Math_game:
         all_algebra = []
 
         if difficulty == easy_mode:
-            for i in range(70):
+            for i in range(10000):
                 all_algebra.append(Eq(random.randint(1,20) + x, random.randint(1,20)))
                 
 
         if difficulty == medium_mode:
-            for i in range(70):
+            for i in range(10000):
                 all_algebra.append(Eq(random.randint(20,40) + x, random.randint(30,50)))
                 random.shuffle(all_algebra)
                 all_algebra.append(Eq(random.randint(10,40) * x, random.randint(20,50)))
         
         if difficulty == hard_mode:
-            for i in range(50):
+            for i in range(10000):
                 all_algebra.append(Eq(random.randint(40,70) + x, random.randint(50,100)))
                 random.shuffle(all_algebra)
                 all_algebra.append(Eq(random.randint(30,100) * x, random.randint(40,100)))
@@ -413,7 +415,6 @@ class Math_game:
 #- - ↓↓↓↓↓ - -This comment-block is connected to the code below - - ↓↓↓↓↓ - -
 #The code below describes the subtraction game:
 #---------#---------#---------#---------#---------#---------#---------#---------#---------#---------#
-
     @staticmethod
     def subtraction_game(difficulty,amt_problems):
         global correct
